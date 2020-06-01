@@ -1,0 +1,47 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    COMMENT
+    HELP
+
+Grammar
+
+Rule 0     S' -> statement
+Rule 1     statement -> quit
+Rule 2     statement -> words
+Rule 3     statement -> sum
+Rule 4     statement -> start_server
+Rule 5     statement -> connect
+Rule 6     connect -> CONNECT IP NUMBER
+Rule 7     start_server -> START IP NUMBER
+Rule 8     quit -> QUIT RESERV
+Rule 9     words -> ID
+Rule 10    words -> words
+Rule 11    words -> words ID
+Rule 12    send -> SEND words
+
+Terminals, with rules where they appear
+
+COMMENT              : 
+CONNECT              : 6
+HELP                 : 
+ID                   : 9 11
+IP                   : 6 7
+NUMBER               : 6 7
+QUIT                 : 8
+SEND                 : 12
+START                : 7
+error                : 
+
+Nonterminals, with rules where they appear
+
+RESERV               : 8
+connect              : 5
+quit                 : 1
+send                 : 
+start_server         : 4
+statement            : 0
+sum                  : 3
+words                : 2 10 11 12
+
